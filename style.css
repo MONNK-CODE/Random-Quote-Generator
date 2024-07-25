@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #D1D5DB;
+  font-family: 'Odibee Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.header {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+#quote {
+  background-color: #d1f0ff;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  
+}
+
+button {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  font-variant: small-caps;
+  margin: 10px 0;
+}
+
+#generate-button,
+.clear {
+  background-color: #fd0;
+  min-width: 200px;
+  height: 50px;
+  font-family: 'Odibee Sans', sans-serif;
+  font-size: 2rem;
+}
+
+#generate-button:hover,
+.clear:hover {
+  background-color: #75c7f0;
+  font-weight: bold;
+}
+
+.copy {
+  --button-diameter: 50px;
+  background-color: #353434;
+  color: #CCCCCC;
+  width: var(--button-diameter);
+  height: var(--button-diameter);
+  border-radius: 50%;
+  position: relative;
+}
+
+.copy:hover,
+.copy:focus {
+  background-color: #464646;
+}
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font: 12px Menlo, Roboto Mono, monospace;
+  color: rgb(50, 50, 50);
+  text-align: center;
+  padding: 5px 8px;
+  background-color: white;
+  border-radius: 3px;
+  pointer-events: none;
+  transition: opacity 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55), visibility 0.2s;
+}
+
+.tooltip::before {
+  content: attr(data-text-initial);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  width: 7px;
+  height: 7px;
+  background: inherit;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.copy svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkmark {
+  display: none;
+}
+
+.copy:hover .tooltip,
+.copy:focus .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: calc(-100% - 8px);
+}
+
+.copy:focus .tooltip::before {
+  content: attr(data-text-end);
+}
+
+.copy:focus .clipboard {
+  display: none;
+}
+
+.copy:focus .checkmark {
+  display: block;
+}
+
+.copy:active {
+  outline: 1px solid rgb(141, 141, 141);
+}
+
+.copy:hover svg {
+  color: #8bb9fe;
+}
+
+/* Mini Pop-up Styles */
+.popup {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 3rem;
+  }
+
+  #quote {
+    font-size: 1.25rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .copy .tooltip {
+    display: none; /* Hide tooltip on mobile */
+  }
+}
