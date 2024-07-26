@@ -61,7 +61,7 @@ button {
   margin: 10px 0;
 }
 
-#generate-button,
+.generate-button,
 .clear {
   background-color: #fd0;
   min-width: 200px;
@@ -70,7 +70,7 @@ button {
   font-size: 2rem;
 }
 
-#generate-button:hover,
+.generate-button:hover,
 .clear:hover {
   background-color: #75c7f0;
   font-weight: bold;

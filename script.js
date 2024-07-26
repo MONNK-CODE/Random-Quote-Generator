@@ -13,12 +13,24 @@ document.addEventListener('DOMContentLoaded', function() {
         "Anger is the enemy of non-violence and pride is a monster that swallows it up."
     ];
 
+    const fortniteQuotes = [
+        "Don’t get carried away, even the winners are dragged back to the lobby.",
+        "Maturity is realising that 1 medkit is better than 10 bandages.",
+        "Gliders help you at your highest, and leave you at your lowest.",
+        "If your enemies can make edits, then bruh! It was never your build to begin with!",
+        "You can change the skin from the outside, but it’s the same player inside.",
+        "No matter how costly your skins are, everyone can get a victory Royale.",
+        "They spectate only when you’re winning.",
+        "Remember, not even the strongest shield can protect you from the storm.",
+    ]
+
     const generateButton = document.querySelector('#generate-button');
+    const fortniteGenerateButton = document.querySelector('#fortnite-generate-button');
     const clearButton = document.querySelector('.clear');
     const copyButton = document.querySelector('.copy');
     const quoteElement = document.querySelector('#quote');
     const popup = document.getElementById('popup');
-    const tooltip = copyButton.querySelector('.tooltip');
+    //const tooltip = copyButton.querySelector('.tooltip');
 
     generateButton.addEventListener('click', function() {
         const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -27,6 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Generated Quote:', randomQuote);
     });
 
+    fortniteGenerateButton.addEventListener('click',function(){
+        const randomIndex = Math.floor(Math.random() * fortniteQuotes.length);
+        const randomQuote = fortniteQuotes[randomIndex];
+        quoteElement.textContent = randomQuote;
+        console.log('Generated Quote:', randomQuote);
+     });
+    
     clearButton.addEventListener('click', function() {
         quoteElement.textContent = "";
         console.log('Quote cleared.');
