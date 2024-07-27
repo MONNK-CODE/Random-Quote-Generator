@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
         "No matter how costly your skins are, everyone can get a victory Royale.",
         "They spectate only when you’re winning.",
         "Remember, not even the strongest shield can protect you from the storm.",
+        "The smaller the circle the better the people",
+        "The people with the scars are the strongest",
+        "Everyone starts with different loot its just a matter of how you use yours",
+        "How do you expect to get golden loot if you bushcamp all game",   
     ]
 
     const generateButton = document.querySelector('#generate-button');
