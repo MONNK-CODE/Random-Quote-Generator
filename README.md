@@ -14,22 +14,6 @@ The Random Quote Generator is a web-based application that displays a new random
 - **CSS3**
 - **JavaScript**
 
-## Setup
-To run this application locally, follow these steps:
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/yourusername/random-quote-generator.git
-   ```
-
-2. **Navigate to the Project Directory**
-   ```bash
-   cd random-quote-generator
-   ```
-
-3. **Open the Project**
-   Open `index.html` in your preferred web browser or code editor.
-
 ## Usage
 - **Generate a New Quote**: Click the "Generate Quote" button to display a new random quote.
 - **Copy Quote**: Click the copy icon to copy the quote text to your clipboard.
@@ -38,9 +22,3 @@ To run this application locally, follow these steps:
 ## Contributing
 Contributions to this project are welcome. Please fork the repository and submit a pull request with any improvements or fixes.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to modify or expand this README according to your needs!
