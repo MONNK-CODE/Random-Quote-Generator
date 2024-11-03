@@ -1,4 +1,5 @@
-# Random Quote Generator
+# Random Quote Generator - 
+## Code Nation Project
 
 ## Introduction
 The Random Quote Generator is a web-based application that displays a new random quote each time you click the "Generate Quote" button. This application also features options to copy quotes to the clipboard and clear the displayed quote. Designed to be mobile-friendly and user-friendly, it offers a straightforward way to get inspired or share motivational quotes.
